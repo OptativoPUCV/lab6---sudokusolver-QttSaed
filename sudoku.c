@@ -129,10 +129,10 @@ Node* DFS(Node* initial, int* cont){
         }
 
         List* adj_nodes = get_adj_nodes(curr);
-        Node* adj_node = first(adj_nodes);
-        while (adj_node != NULL){
-            push(s, adj_node);
-            adj_node = next(adj_nodes);
+        Node* temp = first(adj_nodes);
+        while (temp != NULL){
+            push(s, temp);
+            temp = next(adj_nodes);
            
         }
         

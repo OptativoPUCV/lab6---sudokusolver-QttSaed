@@ -13,3 +13,9 @@ sudoku.c:62:25: error: implicit declaration of function ‘free_node’ [-Werror
 cc1: all warnings being treated as errors
 Compilation failed
 9a1bfb6
+Sat 18 May 2024 02:58:31 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|4
+total_score: 15/70
+e6c36f4

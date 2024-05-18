@@ -112,19 +112,32 @@ Node* DFS(Node* initial, int* cont){
         pop(s);
         (*cont)++;
 
-        if (is_final(curr)) {
+        int is_final = 1;
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                if (curr->sudo[i][j] == 0) {
+                    is_final = 0;
+                    break;
+                }
+            }
+            if (!is_final) break;
+        }
+
+        if (is_final) {
             free(s);
             return curr;
         }
 
         List* adj_nodes = get_adj_nodes(curr);
-        Node* temp;
-        while (!is_empty(adj_nodes)) {
-            Node* temp = popFront(adj_nodes);
-            push(s, temp);
+        Node* adj_node = first(adj_nodes);
+        while (adj_node != NULL){
+            push(s, adj_node);
+            adj_node = next(adj_nodes);
+           
         }
+        
         free(curr);
-        free(&adj_nodes);
+        free(adj_nodes);
     }
 
     free(s);

@@ -63,3 +63,21 @@ sudoku.c:100:15: error: unused variable ‘temp’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 bb97893
+Sat 18 May 2024 03:25:25 AM UTC: 
+ sudoku.c | 26 ++++++++++++++++++++++++++
+ 1 file changed, 26 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:57:17: error: unused variable ‘box_idx’ [-Werror=unused-variable]
+   57 |             int box_idx = (i / 3) * 3 + j / 3;
+      |                 ^~~~~~~
+sudoku.c: In function ‘DFS’:
+sudoku.c:128:26: error: void value not ignored as it ought to be
+  128 |             Node* temp = popFront(adj_nodes);
+      |                          ^~~~~~~~
+sudoku.c:126:15: error: unused variable ‘temp’ [-Werror=unused-variable]
+  126 |         Node* temp;
+      |               ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+6e711a2

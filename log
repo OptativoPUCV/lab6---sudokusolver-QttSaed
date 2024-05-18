@@ -81,3 +81,17 @@ sudoku.c:126:15: error: unused variable ‘temp’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 6e711a2
+Sat 18 May 2024 03:27:44 AM UTC: 
+ sudoku.c | 23 +++++++++--------------
+ 1 file changed, 9 insertions(+), 14 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:123:26: error: void value not ignored as it ought to be
+  123 |             Node* temp = popFront(adj_nodes);
+      |                          ^~~~~~~~
+sudoku.c:121:15: error: unused variable ‘temp’ [-Werror=unused-variable]
+  121 |         Node* temp;
+      |               ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+e6b4dd8

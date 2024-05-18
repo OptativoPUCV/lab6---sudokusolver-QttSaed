@@ -44,28 +44,23 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-   int row_used[10] = {0};
-    int col_used[10] = {0};
-    int box_used[10] = {0};
+    int row_used[9][10] = {0};
+    int col_used[9][10] = {0};
+    int box_used[9][10] = {0};
 
     for (int i = 0; i < 9; i++) {
-        memset(row_used, 0, sizeof(row_used));
-        memset(col_used, 0, sizeof(col_used));
-        memset(box_used, 0, sizeof(box_used));
-
         for (int j = 0; j < 9; j++) {
             int box_idx = (i / 3) * 3 + j / 3;
+            int val = n->sudo[i][j];
 
-            if (n->sudo[i][j] != 0) {
-                if (row_used[n->sudo[i][j]] ||
-                    col_used[n->sudo[j][i]] ||
-                    box_used[n->sudo[i/3*3+j/3][i%3*3+j%3]]) {
+            if (val != 0) {
+                if (row_used[i][val] || col_used[j][val] || box_used[box_idx][val]) {
                     return 0;
                 }
 
-                row_used[n->sudo[i][j]] = 1;
-                col_used[n->sudo[j][i]] = 1;
-                box_used[n->sudo[i/3*3+j/3][i%3*3+j%3]] = 1;
+                row_used[i][val] = 1;
+                col_used[j][val] = 1;
+                box_used[box_idx][val] = 1;
             }
         }
     }

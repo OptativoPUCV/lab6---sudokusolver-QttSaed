@@ -25,3 +25,17 @@ Sat 18 May 2024 02:59:13 AM UTC:
  tests:  3|3
 total_score: 25/70
 8040d39
+Sat 18 May 2024 03:11:28 AM UTC: 
+ sudoku.c | 24 ++++++++++++++++++++++++
+ 1 file changed, 24 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:87:13: error: ‘n’ undeclared (first use in this function)
+   87 |     push(s, n);
+      |             ^
+sudoku.c:87:13: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:102:18: error: void value not ignored as it ought to be
+  102 |             temp = popFront(adj_nodes);
+      |                  ^
+Compilation failed
+38bf0c2

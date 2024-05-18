@@ -2,3 +2,14 @@ Sat 18 May 2024 02:47:56 AM UTC:
  tests:  0|5
 total_score: 0/70
 eb314fb
+Sat 18 May 2024 02:57:02 AM UTC: 
+ sudoku.c | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:62:25: error: implicit declaration of function ‘free_node’ [-Werror=implicit-function-declaration]
+   62 |                         free_node(copy_node);
+      |                         ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9a1bfb6

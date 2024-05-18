@@ -99,7 +99,7 @@ Node* DFS(Node* initial, int* cont){
         List* adj_nodes = get_adj_nodes(curr);
         Node* temp;
         while (!is_empty(adj_nodes)) {
-            temp = popFront(adj_nodes);
+            Node* temp = popFront(adj_nodes);
             push(s, temp);
         }
         free(curr);

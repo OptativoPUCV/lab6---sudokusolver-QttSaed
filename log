@@ -49,3 +49,17 @@ sudoku.c:102:18: error: void value not ignored as it ought to be
       |                  ^
 Compilation failed
 b87596c
+Sat 18 May 2024 03:16:43 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:102:26: error: void value not ignored as it ought to be
+  102 |             Node* temp = popFront(adj_nodes);
+      |                          ^~~~~~~~
+sudoku.c:100:15: error: unused variable ‘temp’ [-Werror=unused-variable]
+  100 |         Node* temp;
+      |               ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+bb97893
